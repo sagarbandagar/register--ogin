@@ -1,0 +1,208 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+body, p, a, h2, h3, h4, h5, h6, input, label {
+    color: #000000; /* worddark color */
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/* Login and Register common styles */
+.logincontent, .registercontent {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--green-50);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logincontent {
+    width: 400px;
+}
+
+.registercontent {
+    width: 600px;
+}
+
+/* Top bar styles */
+.logintop, .registertop {
+    height: 60px;
+    background-color: #093076; 
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.registertop {
+    background-color: #009933; 
+}
+
+/* Textbox styles */
+.textbox {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+::placeholder {
+    color: #666;
+    opacity: 1;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/* Button styles */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #1c11c2; 
+    color: #FFFFFF;
+    font-style: oblique;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #7e7bda;
+}
+
+/* Link styles */
+.worddark a {
+    color: #3d13d3;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.worddark a:hover {
+    text-decoration: underline;
+}
+
+.wordlight {
+    color: #FFFFFF;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/* Form group and row styles */
+.form-group {
+    margin-bottom: 15px;
+    width: 48%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-row .form-group {
+    width: 48%;
+}
+
+/* Sidebar and content layout */
+.one {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.two {
+    width: 225px;
+    height: 100%;
+    background: #009933;
+    padding: 30px 0px;
+    position: fixed;
+}
+
+.two h1 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    font-style: oblique;
+    font-weight: bold;
+}
+        
+.two ul {
+    padding: 0;
+}
+
+.two ul li {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 0.1px solid white;
+    border-top: 0.1px solid white;
+}
+
+.two ul li a {
+    color: #ffffff;
+    display: block;
+}
+
+.two ul li a .side {
+    width: 25px;
+    align-items: center;
+}
+
+.content {
+    width: calc(100% - 225px);
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.topbar {
+    text-align: center;
+    padding: 10px;
+    background: #00b33c;
+    color: white;
+    border-radius: 10px;
+}
+
+.contentbar {
+    margin: auto;
+    padding-top: 20px;
+}
+
+.contentbar h1 {
+    color: #748078;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.msg {
+    color: red;
+    text-align: center;
+}
+
+/* Additional styles for the display page */
+.border {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
