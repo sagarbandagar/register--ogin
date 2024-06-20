@@ -57,9 +57,15 @@ def logout():
 def register():
     msg = ''
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form:
-        username = request.form['username']
-        password = request.form['password']
-        email = request.form['email']
+        username = request.form.get('username')
+        password = request.form.get('password')
+        email = request.form.get('email')
+        organisation = request.form.get('organisation')
+        address = request.form.get('address')
+        city = request.form.get('city')
+        state = request.form.get('state')
+        country = request.form.get('country')
+        postalcode = request.form.get('postalcode')
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT * FROM accounts WHERE username = %s', (username,))
         account = cursor.fetchone()
@@ -72,7 +78,10 @@ def register():
         elif not username or not password or not email:
             msg = 'Please fill out the form!'
         else:
-            cursor.execute('INSERT INTO accounts VALUES (NULL, %s, %s, %s)', (username, password, email,))
+            cursor.execute('''
+                    INSERT INTO accounts (username, password, email, organisation, address, city, state, country, postalcode)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                ''', (username, password, email, organisation, address, city, state, country, postalcode))
             mysql.connection.commit()
             msg = 'You have successfully registered!'
     elif request.method == 'POST':
